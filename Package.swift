@@ -16,13 +16,13 @@ let package = Package(
     dependencies: [ 
         
         .package(url: "https://github.com/SnapKit/SnapKit.git", from: "5.7.1"),
-        .package(url: "https://github.com/Alamofire/Alamofire", from: "5.9.0"),
+        .package(url: "https://github.com/JonasGessner/JGProgressHUD", from: "2.2.0"),
         .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.19.0")
     ],
     targets: [
         .target(
             name: "SwiftPM",
-            dependencies: ["SnapKit", "Alamofire", "SDWebImage"]
+            dependencies: ["SnapKit", "JGProgressHUD", "SDWebImage"]
         ),
       
             
