@@ -13,9 +13,8 @@ let package = Package(
             targets: ["SwiftPM"]
         ),
     ],
-    dependencies: [
-        .package(url: "https://github.com/SnapKit/SnapKit.git", from: "5.7.1"),
-        
+    dependencies: [ 
+        .package(url: "https://github.com/SnapKit/SnapKit.git", from: "5.7.1")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
