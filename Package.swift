@@ -17,12 +17,15 @@ let package = Package(
         
         .package(url: "https://github.com/SnapKit/SnapKit.git", from: "5.7.1"),
         .package(url: "https://github.com/Alamofire/Alamofire", from: "5.9.0"),
-        .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.19.0")
+        .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.19.0"),
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.89.0")
+        
     ],
     targets: [
         .target(
             name: "SwiftPM",
-            dependencies: ["SnapKit", "Alamofire", "SDWebImage"]
+            dependencies: ["SnapKit", "Alamofire", "SDWebImage", 
+                .product(name: "Vapor", package: "vapor")]
         ),
       
             

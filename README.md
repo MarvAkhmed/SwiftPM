@@ -6,5 +6,3 @@
 //
 
 Github link for my SPM -> https://github.com/MarvAkhmed/SwiftPM
-
-this package manager contains Alamofire, SnapKit, and SDWebImage Dependencies
