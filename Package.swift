@@ -19,6 +19,8 @@ let package = Package(
         .package(url: "https://github.com/Alamofire/Alamofire", from: "5.9.0"),
         .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.19.0"),
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
+        .package(url: "https://github.com/vapor/fluent.git", from: "4.0.0"),
+        .package(url: "https://github.com/vapor/fluent-sqlite-driver.git", from: "4.0.0")
         
     ],
     targets: [
@@ -27,7 +29,10 @@ let package = Package(
             dependencies: ["SnapKit",
                            "Alamofire",
                            "SDWebImage",
-                           .product(name: "Vapor", package: "vapor")]
+                           .product(name: "Vapor", package: "vapor"),
+                           .product(name: "Fluent", package: "fluent"),
+                           .product(name: "FluentSQLiteDriver", package: "fluent-sqlite-driver")
+                          ]
         ),
         
       
