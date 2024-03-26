@@ -7,27 +7,24 @@ let package = Package(
     name: "SwiftPM",
     platforms: [.iOS(.v15)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "SwiftPM",
             targets: ["SwiftPM"]
         ),
     ],
-    dependencies: [ 
+    dependencies: [
+        .package(url: "https://github.com/SnapKit/SnapKit.git", from: "5.0.1"),
         
-        .package(url: "https://github.com/SnapKit/SnapKit.git", from: "5.7.1"),
-        .package(url: "https://github.com/JonasGessner/JGProgressHUD", from: "2.2.0"),
         .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.19.0")
     ],
     targets: [
         .target(
             name: "SwiftPM",
-            dependencies: ["SnapKit", "JGProgressHUD", "SDWebImage"]
+            dependencies: ["SnapKit",  "SDWebImage"]
         ),
-      
-            
         .testTarget(
             name: "SwiftPMTests",
-            dependencies: ["SwiftPM"]),
+            dependencies: ["SwiftPM"]
+        ),
     ]
 )
